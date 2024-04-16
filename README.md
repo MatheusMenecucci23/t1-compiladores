@@ -1,10 +1,18 @@
+# Students
+- Augusto Luchesi Matos, BCC, 740871
+- Matheus Menecucci, BCC, 800310
+
 # Project Setup Guide
 
 This guide provides step-by-step instructions for setting up your development environment for the project.
 
+## Linux Operational System
+
+First, you must have a Linux distribution as your computer's operating system.
+
 ## Checking Java Installation
 
-First, you need to check if Java is installed on your system. Open a terminal and run:
+Now, you need to check if Java is installed on your system. Open a terminal and run:
 ```
 java -version
 ```
