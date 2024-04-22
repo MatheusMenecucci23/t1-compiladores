@@ -70,16 +70,30 @@ cd /home/$USER/
 
 2. **Clone the Project Repository**
 
-Clone the project repository into your home directory:
+2.1. Clone the project repository into your home directory:
 ```
 git clone https://github.com/MatheusMenecucci23/t1-compiladores.git
 ```
+
+2.2. Create a new directory to download the automatic corrector and the test cases:
+
+```
+mkdir corretor
+cd corretor
+```
+
+2.3. Download the corrector in the link below and put in the "**corretor**" directory:
+[Download Corrector](https://github.com/dlucredio/compiladores-corretor-automatico/blob/master/target/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar)
+
+2.4. Download the test cases in the link below and extract the zip file in the "**corretor**" directory (you must have access to classrom "2024/1 - Compiladores" class):
+[Download Test Cases](https://classroom.google.com/u/1/c/NjU2MjEyMDA5MDA2/m/NjU2MjEyMDA5MDI2/details)
+
 
 ## Compile and Generating the JAR File
 
 3. **Compiling the Project**
 
-Navigate to the directory you just cloned:
+Navigate to the directory you cloned:
 ```
 cd /home/$USER/t1-compiladores
 ```
@@ -96,7 +110,7 @@ The `alguma-lexico-1.0-SNAPSHOT.jar` file will be created in the `/home/$USER/t1
 
 Execute the following command to run the tests:
 ```
-java -jar /home/$USER/t1-compiladores/corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar "java -jar /home/$USER/t1-compiladores/target/alguma-lexico-1.0-SNAPSHOT.jar" gcc /home/$USER/t1-compiladores/corretor/temp /home/$USER/t1-compiladores/corretor/casos-de-teste/casos-de-teste "Student 1 number, Student 2 number, Student 3 number" t1
+java -jar /home/$USER/corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar " java -jar /home/$USER/t1-compiladores/target/alguma-lexico-1.0-SNAPSHOT-jar-with-dependencies.jar" gcc home/corretor/temp /home/$USER/corretor/casos-de-teste/casos-de-teste  "Student 1 number, Student 2 number, Student 3 number" t1
 ```
 
 Replace `"Student 1 number, Student 2 number, Student 3 number"` with the actual student numbers.
