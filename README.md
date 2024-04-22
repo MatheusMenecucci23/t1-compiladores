@@ -79,59 +79,31 @@ git clone https://github.com/MatheusMenecucci23/t1-compiladores.git
 
 3. **Compiling the Project**
 
-Navigate to the source code directory:
-```
-cd /home/$USER/t1-compiladores/src/main/java/br/ufscar/dc/compiladores/alguma/lexico
-```
-
-Compile the Java files:
-```
-javac *.java
-```
-
-4. **Generating the JAR File**
-
-After compiling the Java files, proceed to generate the `.jar` file for the project. This involves creating a manifest file and using the `jar` command to package the compiled classes.
-
-4.1. **Create a Manifest File**
-
-Create a manifest file named `Manifest.txt` in the root directory of your project with the following content:
-```
-Main-Class: Principal.java
-```
-
-Ensure there is a newline at the end of the file.
-
-4.2. **Generate the JAR File**
-
-Use the following command to generate the `.jar` file in the specified target directory:
-```
-jar cvfm /home/$USER/t1-compiladores/target/alguma-lexico-1.0-SNAPSHOT.jar Manifest.txt *.class
-```
-
-The `alguma-lexico-1.0-SNAPSHOT.jar` file will be created in the `/home/$USER/t1-compiladores/target` directory.
-
-4.3. **Verify the JAR File**
-
-To verify that the JAR file has been created correctly and is located in the target directory, run:
-```
-java -jar /home/$USER/t1-compiladores/target/alguma-lexico-1.0-SNAPSHOT.jar
-```
-
-5. **Return to the Root Directory**
-
-Return to the root directory of the project:
+Navigate to the directory you just cloned:
 ```
 cd /home/$USER/t1-compiladores
 ```
 
-6. **Running Tests**
+Compile the project using Maven:
+```
+mvn package
+```
+This is possible because the file 'pom.xml' is configured to compile the project.
+
+The `alguma-lexico-1.0-SNAPSHOT.jar` file will be created in the `/home/$USER/t1-compiladores/target` directory.
+
+4. **Running Tests**
 
 Execute the following command to run the tests:
 ```
 java -jar /home/$USER/t1-compiladores/corretor/compiladores-corretor-automatico-1.0-SNAPSHOT-jar-with-dependencies.jar "java -jar /home/$USER/t1-compiladores/target/alguma-lexico-1.0-SNAPSHOT.jar" gcc /home/$USER/t1-compiladores/corretor/temp /home/$USER/t1-compiladores/corretor/casos-de-teste/casos-de-teste "Student 1 number, Student 2 number, Student 3 number" t1
 ```
 
+Replace `"Student 1 number, Student 2 number, Student 3 number"` with the actual student numbers.
+
+This guide should help you set up your development environment and get started with the project.
+
+This README.md provides a comprehensive guide for setting up the development environment, including checking and installing Java and GCC, setting up the project, compiling the source code, and running tests.
 Replace `"Student 1 number, Student 2 number, Student 3 number"` with the actual student numbers.
 
 This guide should help you set up your development environment and get started with the project.
